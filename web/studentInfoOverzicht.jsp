@@ -1,0 +1,62 @@
+<%@ page import="domain.model.Student" %>
+<%@ page import="java.util.ArrayList" %>
+<%
+    Student greetje = new Student("Jongen", "Greetje", "Toegepaste Informatica", 23);
+    Student kristien = new Student("Melaerts", "Kristien", "Chemie", 21);
+    Student elke = new Student("Steegmans", "Elke", "Vroedkunde", 16);
+    Student jan = new Student("Van Hee", "Jan", "Verpleegkunde", 18);
+
+    ArrayList<Student> students = new ArrayList<Student>();
+    students.add(greetje);
+    students.add(kristien);
+    students.add(elke);
+    students.add(jan);
+
+%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Student Info: Overzicht</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>Naam</th>
+        <th>Voornaam</th>
+        <th>Leeftijd</th>
+        <th>Studierichting</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><%=greetje.getNaam()%></td>
+        <td><%=greetje.getVoornaam()%></td>
+        <td><%=greetje.getLeeftijd()%></td>
+        <td><%=greetje.getStudierichting()%></td>
+    </tr>
+    <tr>
+        <td><%=kristien.getNaam()%></td>
+        <td><%=kristien.getVoornaam()%></td>
+        <td><%=kristien.getLeeftijd()%></td>
+        <td><%=kristien.getStudierichting()%></td>
+    </tr>
+    <tr>
+        <td><%=elke.getNaam()%></td>
+        <td><%=elke.getVoornaam()%></td>
+        <td><%=elke.getLeeftijd()%></td>
+        <td><%=elke.getStudierichting()%></td>
+    </tr>
+    <tr>
+        <td><%=jan.getNaam()%></td>
+        <td><%=jan.getVoornaam()%></td>
+        <td><%=jan.getLeeftijd()%></td>
+        <td><%=jan.getStudierichting()%></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
